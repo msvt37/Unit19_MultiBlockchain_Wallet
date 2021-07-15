@@ -17,6 +17,6 @@ def derive_wallets(coin=BTC,mnemonic=mnemonic, numderive=3):
     (output, err) = p.communicate()
    
     keys = json.loads(output)
-    return  keys
+    return  keys'
 
 
