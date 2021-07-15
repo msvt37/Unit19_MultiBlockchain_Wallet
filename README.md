@@ -16,6 +16,5 @@ Here is the code snippet needed to generate the wallets:
         p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
         (output, err) = p.communicate()
         keys = json.loads(output)
-        return  keys
-'''
+        return  keys'''
 
