@@ -35,3 +35,10 @@ Per the assigment instructions, we fund one of the BTCTEST addresses from a test
 The following image shows a successful funding for that address:
 ![Funded](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/04ec129ede62421681c0f5b3445b9ff0e6d84dbb/1stTransaction.PNG)
 
+From a terminal on the local machine I ran the followin to send a transaction to one of the other addresses in the wallet:
+```
+from wallet import *
+account1  = priv_key_to_account(BTCTEST,"cUwwm3Vhzkf37y4PcRKTT1N4T4z7bJFHtk8HMZaeEyrG2RgmzoPP")
+result = send_tx(BTCTEST, account1, "mgXbaS3U9KvX4Y6kBPfGZc1PnccYsHuvho", .0001)
+```
+
