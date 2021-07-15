@@ -7,4 +7,21 @@ This assignment focuses on the creation of a mult-currency crypto wallet via "hd
 # Steps
 The code contained in wallet.py has all of the necessary functions for deriving the wallets, storing the output from the derivation, and sending transactions.
 Our function to derive the wallet creates 3 separate wallets for each ETH, and BTCTEST.  The output of this can be found in wallet.txt.  Each wallet has a unique address, private key, and public key.
+Here is the code snippet needed to generate the wallets:
+'def derive_wallets(coin=BTC,mnemonic=mnemonic, numderive=3):
+   
+    command = f'php ./hd-wallet-derive/hd-wallet-derive.php -g --mnemonic="{mnemonic}" --numderive={numderive} --coin="{coin}" --format=json' 
+    
+    p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+    (output, err) = p.communicate()
+   
+    keys = json.loads(output)
+    return  keys
+
+# Create a dictionary object called coins to store the output from `derive_wallets`.
+coins = {
+   ETH: derive_wallets(coin =ETH),
+   BTCTEST: derive_wallets(coin = BTCTEST)
+  }
+pprint(coins)
 
