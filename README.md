@@ -18,10 +18,4 @@ Here is the code snippet needed to generate the wallets:
     keys = json.loads(output)
     return  keys
 
-# Create a dictionary object called coins to store the output from `derive_wallets`.
-coins = {
-   ETH: derive_wallets(coin =ETH),
-   BTCTEST: derive_wallets(coin = BTCTEST)
-  }
-pprint(coins)
 
