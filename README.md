@@ -11,7 +11,7 @@ Our function to derive the wallet creates 3 separate wallets for each ETH, and B
 Each wallet has a unique address, private key, and public key.
 Here is the code snippet needed to generate the wallets:
 
-'''Python
+```Python
    def derive_wallets(coin=BTC,mnemonic=mnemonic, numderive=3):
    
         command = f'php ./hd-wallet-derive/hd-wallet-derive.php -g --mnemonic="{mnemonic}" --numderive={numderive} --coin="{coin}" --format=json' 
@@ -20,5 +20,5 @@ Here is the code snippet needed to generate the wallets:
         (output, err) = p.communicate()
         keys = json.loads(output)
         return  keys
-        '''
+  ```
 
