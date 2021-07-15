@@ -30,4 +30,8 @@ coins = {
    BTCTEST: derive_wallets(coin = BTCTEST)
   }
 ```
-Per the assigment instructions, we fund one of the BTCTEST addresses from a testnet faucet so that transactions may be sent from it.  For our purposes, we simply picked the first address in the list as our funded account: *msEyH6qigVri1xLxxGkPq4ZBdajvSNvdNj*
+Per the assigment instructions, we fund one of the BTCTEST addresses from a testnet faucet so that transactions may be sent from it.  For our purposes, we simply picked the first address in the list as our funded account: *msEyH6qigVri1xLxxGkPq4ZBdajvSNvdNj*  
+
+The following image shows a successful funding for that address:
+![Funded](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/04ec129ede62421681c0f5b3445b9ff0e6d84dbb/1stTransaction.PNG)
+
