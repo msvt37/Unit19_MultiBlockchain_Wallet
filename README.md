@@ -79,3 +79,5 @@ The resulting transaction can be found here
   ```
   ![GETH](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/5ee2de77919d63963b86de006c7ea8a75b97e9f9/GethReset.PNG)
   
+  Due to issues with MyCrypto, I was unable to fund the empty chain in order to send a transaction locally.
+  
