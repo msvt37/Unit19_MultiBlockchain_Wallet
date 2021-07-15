@@ -69,3 +69,7 @@ def send_tx(coin,account,to,amount):
 ```
 The resulting transaction can be found here
 ![Transaction](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/404024f0dea1352591bcb4258c4e64525917cd00/2ndTransaction.PNG)
+
+# Local PoA Ethereum Transaction
+  The following address was added to the local network "abbynet" (developed in previous assignment) - *0xE5402dA49Fa39f798A35e80c12d14FFf61175348
+  
