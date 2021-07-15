@@ -7,6 +7,7 @@ This assignment focuses on the creation of a mult-currency crypto wallet via "hd
 # Steps
 The code contained in wallet.py has all of the necessary functions for deriving the wallets, storing the output from the derivation, and sending transactions.
 Our function to derive the wallet creates 3 separate wallets for each ETH, and BTCTEST.  The output of this can be found in [Wallet.txt](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/55d9fdaccde091a5a051d1acf907fb0dd7b07e18/wallet.txt)
+Full code cand be found here [Wallet.py](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/4b54350e6c1cba344cd609194e3d2dfe54b53ad3/wallet.py)
 
 Each wallet has a unique address, private key, and public key.
 Here is the code snippet needed to generate the wallets:
