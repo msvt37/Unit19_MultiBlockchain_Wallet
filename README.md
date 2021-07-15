@@ -9,14 +9,14 @@ The code contained in wallet.py has all of the necessary functions for deriving 
 Our function to derive the wallet creates 3 separate wallets for each ETH, and BTCTEST.  The output of this can be found in wallet.txt.  Each wallet has a unique address, private key, and public key.
 Here is the code snippet needed to generate the wallets:
 '
-def derive_wallets(coin=BTC,mnemonic=mnemonic, numderive=3):
+'def derive_wallets(coin=BTC,mnemonic=mnemonic, numderive=3):
    
-    command = f'php ./hd-wallet-derive/hd-wallet-derive.php -g --mnemonic="{mnemonic}" --numderive={numderive} --coin="{coin}" --format=json' 
+    'command = f'php ./hd-wallet-derive/hd-wallet-derive.php -g --mnemonic="{mnemonic}" --numderive={numderive} --coin="{coin}" --format=json' 
     
-    p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
-    (output, err) = p.communicate()
+   ' p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+   ' (output, err) = p.communicate()
    
-    keys = json.loads(output)
-    return  keys'
-
+  '  keys = json.loads(output)
+  '  return  keys'
+'
 
