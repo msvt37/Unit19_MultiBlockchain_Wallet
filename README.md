@@ -72,4 +72,10 @@ The resulting transaction can be found here
 
 # Local PoA Ethereum Transaction
   The following address was added to the local network "abbynet" (developed in previous assignment) - *0xE5402dA49Fa39f798A35e80c12d14FFf61175348
+ 
+  The command below resets the local network:
+  ```
+  geth --datadir nodex init abbynet.json
+  ```
+  ![GETH](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/5ee2de77919d63963b86de006c7ea8a75b97e9f9/GethReset.PNG)
   
