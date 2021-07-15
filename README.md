@@ -41,4 +41,29 @@ from wallet import *
 account1  = priv_key_to_account(BTCTEST,"cUwwm3Vhzkf37y4PcRKTT1N4T4z7bJFHtk8HMZaeEyrG2RgmzoPP")
 result = send_tx(BTCTEST, account1, "mgXbaS3U9KvX4Y6kBPfGZc1PnccYsHuvho", .0001)
 ```
-
+The lines above called the following functions:
+```Python
+def priv_key_to_account(coin,priv_key):
+    if coin == ETH:
+        return Account.privateKeyToAccount(priv_key)
+    elif coin == BTCTEST:
+        return PrivateKeyTestnet(priv_key)
+ ```
+ and
+ ```Python
+ # Create a function called `send_tx` that calls `create_tx`, signs and sends the transaction.
+def send_tx(coin,account,to,amount):
+    tx = create_tx(coin, account, to, amount)
+    if coin == ETH:
+        signed_txn = eth_acc.sign_transaction(tx)
+        result = w3.eth.sendRawTransaction(signed_txn.rawTransaction)
+        print(result.hex())
+        return result.hex()
+    elif coin == BTCTEST:
+        tx_btctest = create_tx(coin, account, to, amount)
+        signed_txn = account.sign_transaction(tx)
+        print(signed_txn)
+        return NetworkAPI.broadcast_tx_testnet(signed_txn)
+```
+The resulting transaction can be found here
+![Transaction](https://github.com/msvt37/Unit19_MultiBlockchain_Wallet/blob/404024f0dea1352591bcb4258c4e64525917cd00/2ndTransaction.PNG)
